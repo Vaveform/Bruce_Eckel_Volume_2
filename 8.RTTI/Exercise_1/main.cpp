@@ -56,30 +56,34 @@ int main()
 	
 	srand(time(0));
 
-	//std::generate(objects.begin(), objects.end(), [](){
-	//			switch(rand() % 2)
-	//			{
-	//				case 0:
-	//					return new Base(); // new Base; - syntax available
-	//				case 1:
-	//					return new Derived(); // new Derived; - syntax available
-	//			}
-	//		});
+	std::generate(objects.begin(), objects.end(), [](){
+				Base* inserted = nullptr;
+				switch(rand() % 2)
+				{
+					case 0:
+						inserted = new Base(); // new Base; - syntax available
+						break;
+					case 1:
+						inserted = new Derived(); // new Derived; - syntax available
+						break;
+				}
+				return inserted;
+			});
 
 
-	using Base_It = vector<Base*>::iterator;
-	for(Base_It it = objects.begin(); it != objects.end(); ++it)
-	{
-		switch(rand() % 2)
-		{
-			case 0:
-				*it = new Base(); // new Base; - syntax available
-				break;
-			case 1:
-				*it = new Derived(); // new Derived; - syntax available
-				//breek; - i can not write break here because it is last statement
-		}
-	}
+	//using Base_It = vector<Base*>::iterator;
+	//for(Base_It it = objects.begin(); it != objects.end(); ++it)
+	//{
+	//	switch(rand() % 2)
+	//	{
+	//		case 0:
+	//			*it = new Base(); // new Base; - syntax available
+	//			break;
+	//		case 1:
+	//			*it = new Derived(); // new Derived; - syntax available
+	//			//breek; - i can not write break here because it is last statement
+	//	}
+	//}
 	
 
 	vector<Base*> derived_objects_1;
