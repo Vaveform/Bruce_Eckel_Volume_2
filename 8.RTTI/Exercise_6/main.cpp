@@ -34,7 +34,7 @@ int main()
 
 	//copy(shapes.begin(), shapes.end() ,ostream_iterator<Shape*, char>(cout));
 	// Free of the vector pointers, because destructor of vector cannot to free template pointers
-	vector<Shape*>::iterator  = partition(shapes.begin(), shapes.end(), 
+	vector<Shape*>::iterator second_it = partition(shapes.begin(), shapes.end(), 
 			[](Shape* l){ 
 				return typeid(*l).before(typeid(Square));
 			});
