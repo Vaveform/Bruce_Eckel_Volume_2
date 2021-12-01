@@ -4,6 +4,28 @@
 
 #include <iostream>
 
+// In this exercise this way also working
+// because our template classes also inherited
+// from Animal or SuperHero
+//void animalSound(Animal* a)
+//{
+//	if(a){
+//		a->makeNoise();
+//		a->move();
+//	}
+//}
+//
+//void saveFromFire(SuperHero* s)
+//{
+//	if(s)
+//	{
+//		s->savePersonFromFire();
+//		s->move(); 
+//	}
+//}
+
+
+
 // Here we have concept of AnimalBehaviourPtr
 // which has some requirements for passed types
 // 1. Type should has method with name move
