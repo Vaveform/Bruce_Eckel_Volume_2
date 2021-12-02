@@ -3,7 +3,6 @@
 
 #include "interfaces.h"
 #include <iostream>
-#include <string>
 
 
 // virtual key word in inheritance
@@ -20,6 +19,7 @@ class SuperlativeMan : public virtual SuperHero
 		// Interface SuperHero definition
 		void savePersonFromFire() override;
 		void move() override;
+		void eatFood(int calories);
 		~SuperlativeMan();
 };
 
@@ -34,6 +34,8 @@ class Amoeba : public virtual SuperHero
 		void makeNoise();
 		void savePersonFromFire();
 		void move();
+		void eatFood(const std::string& product, double calories);
+                void eatFood(double calories);
 		~Amoeba();
 };
 
@@ -42,6 +44,43 @@ class SuperlativeAmoeba : public SuperlativeMan, public Amoeba
 	public:
 		SuperlativeAmoeba(int strength = 0);
 		~SuperlativeAmoeba();
+		// For opportunity calling all parents versions eatFood from SuperlativeAmeba 
+		// we should write using declaration for all parents name with name method:
+		// Amoeba::eatFood or SuperlativeMan::eatFood - it is simple way
+		// Second way - write eatFood versions in current nested 
+		// namespace (SuperlativeAmoeba) and inside this methods call concrete versions of
+		// parent classes (external namespaces : SuperlativeMan and Amoeba)
+		// These two ways works, if we have parent classes with the same name of method
+		// but with different signatures. For methods, which have same names 
+		// and same signatures working first way only (for example Base class with virtual
+		// method inherited by Amoeba and SuperlativeMan in which overriden this method and
+		// ABC class inherited from these two classes - in ABC we should write final 
+		// overrider which hide all old version and give one version). 
+		// It is very important, because when we call methods for obj SuperlativeAmoeba
+		// compiler not switch on mechanism of overloading, because all methods in
+		// parent classes located in different namespaces. So,compiler 
+		// see that SuperlativeAmoeba has two or more members with the same names - it is 
+		// ambigious. So, two ways give move names from parent namespaces to current - child
+		// namespace
+
+		//void eatFood(const std::string& product, double calories)
+		//{
+		//	Amoeba::eatFood(product, calories);
+		//}
+
+		//void eatFood(double calories)
+		//{
+		//	Amoeba::eatFood(calories);
+		//}
+
+		//void eatFood(int calories)
+		//{
+		//	SuperlativeMan::eatFood(calories);
+		//}
+
+		// First way of exercise 10:
+		using Amoeba::eatFood;
+		using SuperlativeMan::eatFood;
 		// If we not redefine savePersonFromFire and move we will give a compile error
 		// , because int is ambigious - compiler do not know what version virtual method call
 		// Amoeba::savePersonFromFire() or SuperlativeMan::savePersonFromFire()

@@ -28,6 +28,38 @@ class SuperHero
 };
 
 
+// We can write additional interfaces to change move behaviour for 
+// Animal and SuperHero
+// It is a good pattern - we have interfaces with methods which have
+// the same name - so we can define only one method if we inherite from this 
+// interfaces. We write two other interfaces in which we send responsible
+// from move() method to other virtual method with other name by defining
+// move which calling this pure virtual method 
+class Animal_Moving : public Animal
+{
+	public:
+		virtual void Animal_move() = 0;
+		void move() final
+		{
+			Animal_move(); // we can override move by calling pure virtual method!!!
+		}
+
+};
+
+class SuperHero_Moving : public SuperHero
+{
+	public:
+		virtual void SuperHero_move() = 0;
+		void move() final
+		{
+			SuperHero_move();
+		}
+};
+// Now calling move - for Animal and SuperHero can have different behaviour
+// But calling move for obj or pointers to type TarantulaWoman or Amoeba (inherited from both
+// interfaces) cause ambigious!!!. With templates it is not good solution.
+
+
 class VirtualDestroyer
 {
 	public:
