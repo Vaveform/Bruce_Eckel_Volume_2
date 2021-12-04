@@ -1,0 +1,29 @@
+Too much clients for bank: 0x7fff421af970
+Too much clients for bank: 0x7ffc304e0010
+Too much clients for bank: 0x7ffc304e0010
+Too much clients for bank: 0x7ffcc0d77950
+Too much clients for bank: 0x7ffcc0d77950
+Too much clients for bank: 0x7fff61ec1970
+Too much clients for bank: 0x7fff61ec1970
+Too much clients for bank: 0x7ffd96a755d0
+Too much clients for bank: 0x7ffd96a755d0
+Cannot to spend on account 0x5652d45f7560 2011563066$ because balance 12342$
+Cannot to spend on account 0x5652d45f7570 575596092$ because balance 12342$
+Cannot to spend on account 0x5652d45f7580 1998403415$ because balance 12342$
+Cannot to spend on account 0x5652d45f7590 1435138520$ because balance 12342$
+Cannot to spend on account 0x5652d45f75a0 1835953920$ because balance 12342$
+Too much clients for bank: 0x7ffc843094d0
+Too much clients for bank: 0x7ffc843094d0
+Cannot to spend on account 0x55907618b560 1050208359$ because balance 12342$
+Cannot to spend on account 0x55907618b570 690874357$ because balance 12342$
+Cannot to spend on account 0x55907618b580 1102414417$ because balance 12342$
+Cannot to spend on account 0x55907618b590 1234107995$ because balance 12342$
+Cannot to spend on account 0x55907618b5a0 1707142771$ because balance 12342$
+Too much clients for bank: 0x7fff3e341a10
+Too much clients for bank: 0x7fff3e341a10
+Cannot to spend on account 0x55e75b548570 1880117281$ because balance 1538898719$
+Cannot to spend on account 0x55e75b548590 2012901589$ because balance 87862947$
+Too much clients for bank: 0x7ffcf82fbdd0
+Too much clients for bank: 0x7ffcf82fbdd0
+Cannot to spend on account 0x55aafb8fa590 1672419289$ because balance 1212817281$
+Cannot to spend on account 0x55aafb8fa5a0 1710706182$ because balance 914913709$
