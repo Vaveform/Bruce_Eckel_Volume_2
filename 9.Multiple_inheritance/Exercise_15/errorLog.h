@@ -9,11 +9,12 @@ class ErrorLog
 	private:
 		static std::ofstream error_log_file;
 		static int users_number;
-	public:
+	protected:
 		ErrorLog();
 		ErrorLog(const ErrorLog&);
 		// For object if used move-semantics
 		//ErrorLog(ErrorLog&&);
+	public:
 		virtual ~ErrorLog();
 
 		template<typename T>

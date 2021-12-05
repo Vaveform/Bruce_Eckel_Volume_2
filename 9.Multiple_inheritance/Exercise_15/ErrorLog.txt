@@ -27,3 +27,8 @@ Too much clients for bank: 0x7ffcf82fbdd0
 Too much clients for bank: 0x7ffcf82fbdd0
 Cannot to spend on account 0x55aafb8fa590 1672419289$ because balance 1212817281$
 Cannot to spend on account 0x55aafb8fa5a0 1710706182$ because balance 914913709$
+Too much clients for bank: 0x7ffca998b2f0
+Too much clients for bank: 0x7ffca998b2f0
+Cannot to spend on account 0x561737182560 798060453$ because balance 70734133$
+Cannot to spend on account 0x561737182570 585905514$ because balance 527265478$
+Cannot to spend on account 0x561737182580 1784855716$ because balance 487157889$
